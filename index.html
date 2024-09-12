@@ -15,15 +15,30 @@
         header {
             background-color: #ff6f61; /* Warm coral */
             color: #fff;
-            padding: 20px;
-            text-align: center;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* Space items to edges */
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
         }
+        .header-left {
+            margin-left: 0; /* Ensure Home is on the far left */
+        }
+        .header-left a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .header-center {
+            flex-grow: 1;
+            text-align: center;
+            margin-right: 20px; /* Offset to balance center */
+        }
         .main-content {
-            margin-top: 80px; /* Adjust this value based on the header height */
+            margin-top: 150px; /* Adjust this value based on the header height */
         }
         .container {
             max-width: 800px;
@@ -56,7 +71,9 @@
             text-align: center; /* Ensure highlight text is centered */
         }
         footer {
-            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             padding: 10px;
             background-color: #ff6f61; /* Warm coral */
             color: #fff;
@@ -64,11 +81,31 @@
             width: 100%;
             bottom: 0;
         }
+        .footer-buttons {
+            display: flex;
+            justify-content: space-between; /* Ensure buttons are evenly spaced */
+            width: 100%; /* Make buttons spread across the footer */
+            max-width: 600px; /* Optional: limit the spread */
+        }
+        .footer-buttons a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            text-align: center;
+            flex: 1; /* Make each button equal in width */
+        }
+        .footer-buttons a:hover {
+            background-color: #ffd4c2; /* Light coral on hover */
+        }
     </style>
 </head>
 <body>
     <header>
-        <h2>Caleb Friesen</h2>
+        <div class="header-left">
+            <a href="index.html">Home</a> <!-- "Home" link now points to the index.html file -->
+        </div>
     </header>
     <div class="main-content">
         <div class="container">
@@ -81,7 +118,13 @@
         </div>
     </div>
     <footer>
-        <p>Thank you for visiting!</p>
+        <div class="footer-buttons">
+            <a href="summer2024.html">Summer<br>2024</a>
+            <!-- <a href="#">Fall<br>2024</a> -->
+            <!-- <a href="#">Summer<br>2025</a> -->
+            <!-- <a href="#">Winter<br>2026</a> -->
+            <!-- <a href="#">Summer<br>2026</a> -->
+        </div>
     </footer>
 </body>
 </html>
