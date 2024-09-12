@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Co-op Work Term Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e6f2ff; /* Light blue background */
+            color: #333;
+        }
+        header {
+            background-color: #3399ff; /* Bright blue */
+            color: #fff;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* Space items to edges */
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .header-left {
+            margin-left: 0; /* Ensure Home is on the far left */
+        }
+        .header-left a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .main-content {
+            margin-top: 70px; /* Adjust this value based on the header height */
+            padding: 20px;
+        }
+        .about-employer,
+        .job-description{
+            background-color: #cce0ff; /* Light blue */
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            flex: 1; /* Allow sections to expand and fill available space */
+            max-width: 50%; /* Adjust width to fit side-by-side */
+        }
+        .goals {
+            background-color: #cce0ff; /* Light blue */
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            flex: 1; /* Allow sections to expand and fill available space */
+            max-width: 45%; /* Adjust width to fit side-by-side */
+        }
+        .reflection-container {
+            padding: 20px;
+            background-color: #cce0ff; /* White background for the reflection */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-top: 10px; /* Space above reflection section */
+            margin-bottom: 100px;
+        }
+        .container {
+            padding: 10px;
+            background-color: #fff; /* White background for the content */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .container-content {
+            display: flex;
+            gap: 20px; /* Space between the sections */
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+        }
+        h1 {
+            color: #3399ff; /* Bright blue */
+            margin-top: 0;
+        }
+        h2 {
+            color: #0066cc; /* Bright blue */
+            margin-top: 0;
+            font-size: 1.5em; /* Adjust the font size for h2 */
+            margin-bottom: 10px; /* Add some space below the h2 */
+        }
+        p {
+            line-height: 1.6;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+        footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            background-color: #3399ff; /* Bright blue */
+            color: #fff;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .footer-buttons {
+            display: flex;
+            justify-content: space-between; /* Ensure buttons are evenly spaced */
+            width: 100%; /* Make buttons spread across the footer */
+            max-width: 600px; /* Optional: limit the spread */
+        }
+        .footer-buttons a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            text-align: center;
+            flex: 1; /* Make each button equal in width */
+            font-size: 14px; /* Smaller font size for better fit */
+        }
+        .footer-buttons a:hover {
+            background-color: #b3d9ff; /* Light blue on hover */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <a href="index.html">Home</a> <!-- "Home" link now points to the index.html file -->
+        </div>
+    </header>
+    <div class="main-content">
+        <!-- Sections for "About My Employer", "Goals", and "Job Description" -->
+        <div class="container-content">
+            <div class="about-employer">
+                <h1>About My Employer</h1>
+                <p>Over the past 4 months, I had the opportunity to work for 1296869 Ontario Limited. Established in 1998, the company has been doing custom software development for over 25 years, 
+                    initially using the Microsoft development stack, and recently transitioning to the Microsoft Azure cloud environment. 1296869 Ontario Limited specializes in developing business 
+                    applications for clients, employing a variety of tools such as C#, Microsoft DevOps, SQL, and other technologies.</p>
+            </div>
+            <div class="job-description">
+                <h1>My Job</h1>
+                <p>Throughout this term, I focused primarily on learning to create web pages using Razor Pages. Recently, I started a new project for a client, which is currently ongoing. My task 
+                    was to develop a webpage that displays data about agents within different organizations. During this project, I learned how to sort lists using LINQ (Language-Integrated Query) 
+                    and how to implement sliders to adjust widget sizes dynamically. I also learned the importance of attention to detail, as small mistakes such as having a slightly different 
+                    PartitionKey in table storage and placing correct LINQ commands in the wrong location, can completely mess up your code. These experiences taught me both technical skills and 
+                    problem-solving techniques essential to web development.</p>
+            </div>
+        </div>
+        
+        <div class="container">
+            <h1>Goals</h1>
+            <div class="goals">
+                <h2>Goal #1</h2>
+                <p>My first goal was to gain experience with creating web applications. Over the course of this term, I used razor pages a lot to create web applications to store different kinds of data. I
+                    learnt how to implement dropdowns, and filters, use sorting tools to organize data from tables, use resource files to change the language of my web page dynamically, and use AJAX
+                    (Asynchronous JavaScript and XML) for asynchronous data retrieval. Overall, I believe that I exceeded this goal, as I was able to learn more about using razor pages for web applications
+                    than I had originally expected.</p>
+            </div>
+            <div class="goals">
+                <h2>Goal #2</h2>
+                <p>My second goal was to learn and understand about cloud technologies. During this term, I worked with Azure Storage, a cloud-based solution that allowed me to store and manage data for my 
+                    projects. I learnt how to connect my web application to Azure Storage tables and display the data dynamically on the web pages. Additionally, I explored APIs (Application Programming
+                    Interfaces), specifically working with RESTful APIs (Representational State Transfer), and used it to retrieve data which was passed on to my web application. Overall, I believe that I
+                    was able to meet this goal, as I now have a much better understanding of cloud technologies and how to use them in my projects, and I am looking forward to deploying my web application
+                    to Azure App Service next term.</p>
+            </div>
+            <div class="goals">
+                <h2>Goal #3</h2>
+                <p>My third goal was to improve my efficiency in problem-solving and debugging. During this term, I encountered numerous bugs while running my programs. I learnt how to find the source of the
+                    bugs by setting breakpoints, and running the code line by line to find any malfunctions. Although sometimes I would have to research what to do if I was stuck, I was able to learn about why
+                    the bug occurred, and how to avoid it in the future. In addition to the bugs, I also faced design challenges. For example, I had a dropdown of different cities, however they were ordered
+                    based on their ID value, which resulted in a random order. I learnt how to sort the dropdown alphabetically using LINQ (Language Integrated Query) making the feature more user friendly.
+                    Overall, I believe that I was able to meet this goal, as I have more experience with how to solve bugs and design challenges more easily.</p>
+            </div>
+        </div>
+
+        <div class="reflection-container">
+            <h1>Reflection</h1>
+            <p>This co-op term has been a valuable experience, allowing me to apply my academic knowledge in a real-world setting. Working on various projects has enhanced my technical skills and 
+                given me insights into the challenges and nuances of software development. I've learned the importance of thorough testing and debugging, as well as the value of clear communication 
+                within a team. Overall, this term has contributed significantly to my growth as a software engineer and has prepared me for future roles in the industry, an I am excited for what is
+                come next semester!</p>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-buttons">
+            <a href="summer2024.html">Summer<br>2024</a>
+            <!-- <a href="#">Fall<br>2024</a> -->
+            <!-- <a href="#">Summer<br>2025</a> -->
+            <!-- <a href="#">Winter<br>2026</a> -->
+            <!-- <a href="#">Summer<br>2026</a> -->
+        </div>
+    </footer>
+</body>
+</html>
