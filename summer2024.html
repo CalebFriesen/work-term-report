@@ -9,23 +9,23 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #e6f2ff; /* Light blue background */
+            background-color: #e6f2ff;
             color: #333;
         }
         header {
-            background-color: #3399ff; /* Bright blue */
+            background-color: #3399ff;
             color: #fff;
             padding: 15px 20px;
             display: flex;
             align-items: center;
-            justify-content: space-between; /* Space items to edges */
+            justify-content: space-between;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
         }
         .header-left {
-            margin-left: 0; /* Ensure Home is on the far left */
+            margin-left: 0;
         }
         .header-left a {
             color: #fff;
@@ -33,54 +33,69 @@
             font-size: 18px;
         }
         .main-content {
-            margin-top: 70px; /* Adjust this value based on the header height */
+            margin-top: 70px;
             padding: 20px;
-        }
-        .about-employer,
-        .job-description{
-            background-color: #cce0ff; /* Light blue */
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            flex: 1; /* Allow sections to expand and fill available space */
-            max-width: 50%; /* Adjust width to fit side-by-side */
-        }
-        .goals {
-            background-color: #cce0ff; /* Light blue */
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            flex: 1; /* Allow sections to expand and fill available space */
-            max-width: 45%; /* Adjust width to fit side-by-side */
-        }
-        .reflection-container {
-            padding: 20px;
-            background-color: #cce0ff; /* White background for the reflection */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            margin-top: 10px; /* Space above reflection section */
-            margin-bottom: 100px;
         }
         .container {
             padding: 10px;
-            background-color: #fff; /* White background for the content */
+            background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
         }
+        .about-employer,
+        .job-description{
+            background-color: #cce0ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            flex: 1;
+            max-width: 50%;
+        }
+        .goal-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .goal-text {
+            background-color: #cce0ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            flex: 1;
+            max-width: 50%;
+        }
+        .goal-screenshot {
+            flex: 0 0 auto;
+            max-width: 50%;
+            border: 2px solid black;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .goal-screenshot img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .reflection-container {
+            padding: 20px;
+            background-color: #cce0ff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-top: 10px;
+            margin-bottom: 75px;
+        }
         .container-content {
             display: flex;
-            gap: 20px; /* Space between the sections */
-            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+            gap: 20px;
+            flex-wrap: wrap;
         }
         h1 {
-            color: #3399ff; /* Bright blue */
+            color: #3399ff;
             margin-top: 0;
         }
         h2 {
-            color: #0066cc; /* Bright blue */
+            color: #0066cc;
             margin-top: 0;
-            font-size: 1.5em; /* Adjust the font size for h2 */
-            margin-bottom: 10px; /* Add some space below the h2 */
         }
         p {
             line-height: 1.6;
@@ -92,7 +107,7 @@
             justify-content: center;
             align-items: center;
             padding: 10px;
-            background-color: #3399ff; /* Bright blue */
+            background-color: #3399ff;
             color: #fff;
             position: fixed;
             width: 100%;
@@ -100,9 +115,9 @@
         }
         .footer-buttons {
             display: flex;
-            justify-content: space-between; /* Ensure buttons are evenly spaced */
-            width: 100%; /* Make buttons spread across the footer */
-            max-width: 600px; /* Optional: limit the spread */
+            justify-content: space-between;
+            width: 100%;
+            max-width: 600px;
         }
         .footer-buttons a {
             color: #fff;
@@ -111,22 +126,21 @@
             border-radius: 5px;
             transition: background-color 0.3s;
             text-align: center;
-            flex: 1; /* Make each button equal in width */
-            font-size: 14px; /* Smaller font size for better fit */
+            flex: 1;
+            font-size: 14px;
         }
         .footer-buttons a:hover {
-            background-color: #b3d9ff; /* Light blue on hover */
+            background-color: #b3d9ff;
         }
     </style>
 </head>
 <body>
     <header>
         <div class="header-left">
-            <a href="index.html">Home</a> <!-- "Home" link now points to the index.html file -->
+            <a href="index.html">Home</a>
         </div>
     </header>
     <div class="main-content">
-        <!-- Sections for "About My Employer", "Goals", and "Job Description" -->
         <div class="container-content">
             <div class="about-employer">
                 <h1>About My Employer</h1>
@@ -143,40 +157,57 @@
                     problem-solving techniques essential to web development.</p>
             </div>
         </div>
-        
         <div class="container">
-            <h1>Goals</h1>
-            <div class="goals">
-                <h2>Goal #1</h2>
-                <p>My first goal was to gain experience with creating web applications. Over the course of this term, I used razor pages a lot to create web applications to store different kinds of data. I
-                    learnt how to implement dropdowns, and filters, use sorting tools to organize data from tables, use resource files to change the language of my web page dynamically, and use AJAX
-                    (Asynchronous JavaScript and XML) for asynchronous data retrieval. Overall, I believe that I exceeded this goal, as I was able to learn more about using razor pages for web applications
-                    than I had originally expected.</p>
+            <h1>My Goals</h1>
+            <div class="goal-item">
+                <div class="goal-text">
+                    <h2>Goal #1</h2>
+                    <p>My first goal was to gain experience with creating web applications. Over the course of this term, I used razor pages a lot to create web applications to store different kinds of data. I
+                        learnt how to implement dropdowns, and filters, use sorting tools to organize data from tables, use resource files to change the language of my web page dynamically, and use AJAX
+                        (Asynchronous JavaScript and XML) for asynchronous data retrieval. Overall, I believe that I exceeded this goal, as I was able to learn more about using razor pages for web applications
+                        than I had originally expected. On the right, is the first razor page I created, which displays different movies and data about the movie. In addition, you are able to sort the data from
+                        each column. In this example, the data sorted by the title, and the release date if two titles match.</p>
+                </div>
+                <div class="goal-screenshot">
+                    <img src="screenshot1.jpg" alt="Screenshot for Goal #1">
+                </div>
             </div>
-            <div class="goals">
-                <h2>Goal #2</h2>
-                <p>My second goal was to learn and understand about cloud technologies. During this term, I worked with Azure Storage, a cloud-based solution that allowed me to store and manage data for my 
-                    projects. I learnt how to connect my web application to Azure Storage tables and display the data dynamically on the web pages. Additionally, I explored APIs (Application Programming
-                    Interfaces), specifically working with RESTful APIs (Representational State Transfer), and used it to retrieve data which was passed on to my web application. Overall, I believe that I
-                    was able to meet this goal, as I now have a much better understanding of cloud technologies and how to use them in my projects, and I am looking forward to deploying my web application
-                    to Azure App Service next term.</p>
+            <div class="goal-item">
+                <div class="goal-text">
+                    <h2>Goal #2</h2>
+                    <p>My second goal was to learn and understand about cloud technologies. During this term, I worked with Azure Storage, a cloud-based solution that allowed me to store and manage data for my 
+                        projects. I learnt how to connect my web application to Azure Storage tables and display the data dynamically on the web pages. Additionally, I explored APIs (Application Programming
+                        Interfaces), specifically working with RESTful APIs (Representational State Transfer), and used it to retrieve data which was passed on to my web application. Overall, I believe that I
+                        was able to meet this goal, as I now have a much better understanding of cloud technologies and how to use them in my projects, and I am looking forward to deploying my web application
+                        to Azure App Service next term. On the right, is a razor page that used APIs to retrieve the data passed on to the web application. It also includes a widget on the right side, allowing
+                        the user to edit information about that specific agent.</p>
+                </div>
+                <div class="goal-screenshot">
+                    <img src="screenshot3.jpg" alt="Screenshot for Goal #2">
+                </div>
             </div>
-            <div class="goals">
-                <h2>Goal #3</h2>
-                <p>My third goal was to improve my efficiency in problem-solving and debugging. During this term, I encountered numerous bugs while running my programs. I learnt how to find the source of the
-                    bugs by setting breakpoints, and running the code line by line to find any malfunctions. Although sometimes I would have to research what to do if I was stuck, I was able to learn about why
-                    the bug occurred, and how to avoid it in the future. In addition to the bugs, I also faced design challenges. For example, I had a dropdown of different cities, however they were ordered
-                    based on their ID value, which resulted in a random order. I learnt how to sort the dropdown alphabetically using LINQ (Language Integrated Query) making the feature more user friendly.
-                    Overall, I believe that I was able to meet this goal, as I have more experience with how to solve bugs and design challenges more easily.</p>
+            <div class="goal-item">
+                <div class="goal-text">
+                    <h2>Goal #3</h2>
+                    <p>My third goal was to improve my efficiency in problem-solving and debugging. During this term, I encountered numerous bugs while running my programs. I learnt how to find the source of the
+                        bugs by setting breakpoints, and running the code line by line to find any malfunctions. Although sometimes I would have to research what to do if I was stuck, I was able to learn about why
+                        the bug occurred, and how to avoid it in the future. In addition to the bugs, I also faced design challenges. For example, I had a dropdown of different countries, however they were ordered
+                        based on their ID value, which resulted in a random order. I learnt how to sort the dropdown alphabetically using LINQ (Language Integrated Query) making the feature more user friendly.
+                        Overall, I believe that I was able to meet this goal, as I have more experience with how to solve bugs and design challenges more easily. On the right is the movie razor page from before,
+                        except it is now filtered by their country, and by the starting letter of the title. Implementing this took a while to figure out, as I needed to save two different value types, and filter
+                        both at once.</p>
+                </div>
+                <div class="goal-screenshot">
+                    <img src="screenshot2.jpg" alt="Screenshot for Goal #3">
+                </div>
             </div>
         </div>
-
         <div class="reflection-container">
-            <h1>Reflection</h1>
+            <h1>Final Thoughts and Reflection</h1>
             <p>This co-op term has been a valuable experience, allowing me to apply my academic knowledge in a real-world setting. Working on various projects has enhanced my technical skills and 
                 given me insights into the challenges and nuances of software development. I've learned the importance of thorough testing and debugging, as well as the value of clear communication 
-                within a team. Overall, this term has contributed significantly to my growth as a software engineer and has prepared me for future roles in the industry, an I am excited for what is
-                come next semester!</p>
+                within a team. Overall, this term has contributed significantly to my growth as a software engineer and has prepared me for future roles in the industry, and I am excited for what is
+                to come next semester!</p>
         </div>
     </div>
     <footer>
