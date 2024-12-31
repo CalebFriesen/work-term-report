@@ -9,11 +9,11 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #e6f2ff;
+            background-color: #f4f4f9;
             color: #333;
         }
         header {
-            background-color: #3399ff;
+            background-color: #5a5a89;
             color: #fff;
             padding: 15px 20px;
             display: flex;
@@ -43,8 +43,8 @@
             border-radius: 8px;
         }
         .about-employer,
-        .job-description{
-            background-color: #cce0ff;
+        .job-description {
+            background-color: #dedede;
             padding: 20px;
             border-radius: 8px;
             margin-bottom: 20px;
@@ -58,7 +58,7 @@
             margin-bottom: 20px;
         }
         .goal-text {
-            background-color: #cce0ff;
+            background-color: #dedede;
             padding: 20px;
             border-radius: 8px;
             margin-bottom: 20px;
@@ -68,7 +68,7 @@
         .goal-screenshot {
             flex: 0 0 auto;
             max-width: 50%;
-            border: 2px solid black;
+            border: 2px solid #444;
             border-radius: 8px;
             overflow: hidden;
         }
@@ -78,7 +78,7 @@
         }
         .reflection-container {
             padding: 20px;
-            background-color: #cce0ff;
+            background-color: #dedede;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
             margin-top: 10px;
@@ -90,11 +90,11 @@
             flex-wrap: wrap;
         }
         h1 {
-            color: #3399ff;
+            color: #5a5a89;
             margin-top: 0;
         }
         h2 {
-            color: #0066cc;
+            color: #444;
             margin-top: 0;
         }
         p {
@@ -107,7 +107,7 @@
             justify-content: center;
             align-items: center;
             padding: 10px;
-            background-color: #3399ff;
+            background-color: #5a5a89;
             color: #fff;
             position: fixed;
             width: 100%;
@@ -130,8 +130,9 @@
             font-size: 14px;
         }
         .footer-buttons a:hover {
-            background-color: #b3d9ff;
+            background-color: #b3b3cc;
         }
+    
     </style>
 </head>
 <body>
@@ -150,12 +151,12 @@
             </div>
             <div class="job-description">
                 <h1>My Job</h1>
-                <p>Throughout this term, I expanded my knowledge on Razor Pages. This term, I created a project for a client. My task 
-                    was to develop a webpage that displays data about agents within different organizations. During this project, I learned how to sort lists using LINQ (Language-Integrated Query) 
-                    and how to implement sliders to adjust widget sizes dynamically. I also learned the importance of attention to detail, as small mistakes such as having a slightly different 
-                    PartitionKey in table storage and placing correct LINQ commands in the wrong location, can completely mess up your code. These experiences taught me both technical skills and 
-                    problem-solving techniques essential to web development.
-                    In addition, I learnt how to use </p>
+                <p> In the first 4 months of my 8-month work term, I learnt how to create web applications using Azure Table Storage
+                    (<a href="summer2024.html">more information about that here</a>).
+                    In the last 4 months, I expanded on that knowledge, creating webpages for clients, and learning how to
+                    thoroughly test my app using test plans. I also learnt how to use Microsoft SQL Server and created web
+                    applications using it, through APIs and Stored Procedures.
+                </p>
             </div>
         </div>
         <div class="container">
@@ -163,52 +164,77 @@
             <div class="goal-item">
                 <div class="goal-text">
                     <h2>Goal #1</h2>
-                    <p>My first goal was to gain experience with creating web applications. Over the course of this term, I used razor pages a lot to create web applications to store different kinds of data. I
-                        learnt how to implement dropdowns, and filters, use sorting tools to organize data from tables, use resource files to change the language of my web page dynamically, and use AJAX
-                        (Asynchronous JavaScript and XML) for asynchronous data retrieval. Overall, I believe that I exceeded this goal, as I was able to learn more about using razor pages for web applications
-                        than I had originally expected. On the right, is the first razor page I created, which displays different movies and data about the movie. In addition, you are able to sort the data from
-                        each column. In this example, the data sorted by the title, and the release date if two titles match.</p>
+                    <p>My first goal was to create a web application for a client. I began working on this application at the end 
+                        of the previous semester, having only just started by that point. This project involved developing an 
+                        application for <i>Expedia Cruises</i> to help them efficiently manage their travel agents from the initial 
+                        stage all the way to completion of all their training and certifications. This project required me to 
+                        collaborate with the client and discuss the necessary features. One of the key features developed was 
+                        a checklist to track the travel agents’ progress through the company’s training milestones. The system 
+                        would inform the person in charge of their next task about the completion to ensure a smooth workflow. 
+                        Finally, I created a demo video to train administrators on how to use the website effectively, including 
+                        how to add and edit data in the website’s database. Overall, I believe that I succeeded with this goal, as I 
+                        was able to create a fully functioning web application that a company can use, while also gaining valuable 
+                        experience in collaborating with a client, who is not in the technical field, to help bring their vision to 
+                        life.</p>
+                        <p>On the right is a screenshot of the checklist feature mentioned above. It includes all of the 
+                            training milestones, it is color-coded to represent the person in charge of that task, it shows the
+                            timestamp of when a task was completed, and a "*" represent a milestone that would send an email upon
+                            completion. Note: all names were randomly generated, the full website (used for testing) can be found
+                            <a href="https://milestoneagentprocess-qa.azurewebsites.net">here</a>.
+                        </p>
                 </div>
                 <div class="goal-screenshot">
-                    <img src="screenshot1.jpg" alt="Screenshot for Goal #1">
+                    <img src="Screenshot2-1.jpg" alt="Screenshot for Goal #1">
                 </div>
             </div>
             <div class="goal-item">
                 <div class="goal-text">
                     <h2>Goal #2</h2>
-                    <p>My second goal was to learn and understand about cloud technologies. During this term, I worked with Azure Storage, a cloud-based solution that allowed me to store and manage data for my 
-                        projects. I learnt how to connect my web application to Azure Storage tables and display the data dynamically on the web pages. Additionally, I explored APIs (Application Programming
-                        Interfaces), specifically working with RESTful APIs (Representational State Transfer), and used it to retrieve data which was passed on to my web application. Overall, I believe that I
-                        was able to meet this goal, as I now have a much better understanding of cloud technologies and how to use them in my projects, and I am looking forward to deploying my web application
-                        to Azure App Service next term. On the right, is a razor page that used APIs to retrieve the data passed on to the web application. It also includes a widget on the right side, allowing
-                        the user to edit information about that specific agent.</p>
+                    <p>My second goal was to create an application using Microsoft SQL Server. The past two terms have mostly been 
+                        focused on using Azure Data Storage to store data, however for this project, I used Microsoft SQL as the 
+                        data storage solution. This project that I worked on was an application that would track the waitlist at a 
+                        restaurant. While working on the project, I learnt about SQL stored procedures, which is SQL code that can 
+                        be saved in order to reuse. I utilized stored procedures in several ways: to display clients associated with 
+                        the correct store on its page, to filter each client, and to select a specific client. Overall, I believe 
+                        that I succeeded with this goal, as I gained a deeper understanding of the functionality of Microsoft SQL 
+                        Server, and the advantages that it has over Azure Data Storage. This allowed me to expand my technical 
+                        skills, and showed me the benefits of using the SQL server solution in real-world applications.
+                    </p>
+                    <p>On the right is a screenshot of the clients page of the project I mentioned above. It shows all of the clients'
+                        info, and if you want to change their status, you can click on one of the icons in the status column. In the header,
+                        I used breadcrumb navigate so that the user can move through each page easily, while also keeping track of
+                        where they are in the webpage. The webpage created can be viewed
+                        <a href="TBD">here</a>.
+                    </p>
                 </div>
                 <div class="goal-screenshot">
-                    <img src="screenshot3.jpg" alt="Screenshot for Goal #2">
+                    <img src="Screenshot2-2.jpg" alt="Screenshot for Goal #2">
                 </div>
             </div>
             <div class="goal-item">
                 <div class="goal-text">
                     <h2>Goal #3</h2>
-                    <p>My third goal was to improve my efficiency in problem-solving and debugging. During this term, I encountered numerous bugs while running my programs. I learnt how to find the source of the
-                        bugs by setting breakpoints, and running the code line by line to find any malfunctions. Although sometimes I would have to research what to do if I was stuck, I was able to learn about why
-                        the bug occurred, and how to avoid it in the future. In addition to the bugs, I also faced design challenges. For example, I had a dropdown of different countries, however they were ordered
-                        based on their ID value, which resulted in a random order. I learnt how to sort the dropdown alphabetically using LINQ (Language Integrated Query) making the feature more user friendly.
-                        Overall, I believe that I was able to meet this goal, as I have more experience with how to solve bugs and design challenges more easily. On the right is the movie razor page from before,
-                        except it is now filtered by their country, and by the starting letter of the title. Implementing this took a while to figure out, as I needed to save two different value types, and filter
-                        both at once.</p>
+                    <p>My final goal was to learn how to create a test plan for a web application, ensuring that the entire 
+                        application is thoroughly tested to catch all potential errors. While working on the web application for 
+                        Expedia Cruises, every time I added a new feature, or fixed a bug, I needed to test the entire application, 
+                        as any error in the application could negatively impact the user experience and limit the functionality of 
+                        the app. For this project, I developed a test plan that ran through every single page and feature using 
+                        specific test values to ensure that everything functions properly. I quickly realized the importance of test 
+                        plans as there were several times where the newly added feature would inadvertently break a different 
+                        feature, an issue that would have gone unnoticed had I not run through everything. Overall, I believe that 
+                        I met this goal, as I now have a deeper understanding of test plans, how they work, and their importance 
+                        when creating web applications.</p>
+                        <p>On the right is part of the test plan used to test the program used for <i>Expedia Cruises</i>. It includes
+                        the page and the functionality that needs testing, and what needs to be checked to confirm its functionality.</p>
                 </div>
                 <div class="goal-screenshot">
-                    <img src="screenshot2.jpg" alt="Screenshot for Goal #3">
+                    <img src="Screenshot2-3.jpg" alt="Screenshot for Goal #3">
                 </div>
             </div>
         </div>
         <div class="reflection-container">
             <h1>Final Thoughts and Reflection</h1>
-            <p>This co-op term has been a valuable experience, allowing me to apply my academic knowledge in a real-world setting. Working on various projects has enhanced my technical skills and 
-                given me insights into the challenges and nuances of software development. I've learned the importance of thorough testing and debugging, as well as the value of clear communication 
-                within a team. Overall, this term has contributed significantly to my growth as a software engineer and has prepared me for future roles in the industry, and I am excited for what is
-                to come next semester!</p>
+            <p>Final reflection</p>
         </div>
     </div>
     <footer>
