@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Co-op Work Term Report - Summer 2025</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f7fa; /* light neutral background */
+            color: #333;
+        }
+        header {
+            background-color: #0055A4; /* SHARCNET Blue */
+            color: #fff;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .header-left {
+            margin-left: 0;
+        }
+        .header-left a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .main-content {
+            margin-top: 70px;
+            padding: 20px;
+        }
+        .container {
+            padding: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .about-employer,
+        .job-description{
+            background-color: #FFEDD9; /* light orange tint */
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            flex: 1;
+            max-width: 50%;
+        }
+        .goal-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .goal-text {
+            background-color: #E0ECF9; /* light blue tint */
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            flex: 1;
+            max-width: 50%;
+        }
+        .goal-screenshot {
+            flex: 0 0 auto;
+            max-width: 50%;
+            border: 2px solid black;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .goal-screenshot img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .reflection-container {
+            padding: 20px;
+            background-color: #FFEDD9; /* light orange tint */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-top: 10px;
+            margin-bottom: 75px;
+        }
+        .container-content {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        h1 {
+            color: #0055A4; /* Blue */
+            margin-top: 0;
+        }
+        h2 {
+            color: #FF6600; /* Orange accent */
+            margin-top: 0;
+        }
+        p {
+            line-height: 1.6;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+        footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            background-color: #0055A4; /* Blue */
+            color: #fff;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .footer-buttons {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 600px;
+        }
+        .footer-buttons a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            text-align: center;
+            flex: 1;
+            font-size: 14px;
+            background-color: #FF6600; /* Orange buttons */
+            margin: 0 5px;
+        }
+        .footer-buttons a:hover {
+            background-color: #cc5200; /* darker orange */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <a href="index.html">Home</a>
+        </div>
+    </header>
+    <div class="main-content">
+        <div class="container-content">
+            <div class="about-employer">
+                <h1>About My Employer</h1>
+                <p>Over the past 4 months, I had the opportunity to work for SHARCNET (Shared Hierarchical Academic Research Computing Network), established in 2001. SHARCNET is a consortium that aggregates
+                    funding to purchase supercomputer systems which are shared among the members to perform research. These universities include Waterloo, Guelph, McMaster, Western and Windsor.
+                </p>
+            </div>
+            <div class="job-description">
+                <h1>My Job</h1>
+                <p>Throughout this term, I focused primarily on creating Python scripts to collect metrics from the supercomputer and display the data on Prometheus, an open-source monitoring system.
+                    In this process, I learned how to perform web scraping using Python, and how to export these scripts to Prometheus effectively. In addition to scripting, I was assigned several tasks
+                    in the Data Center, such as installing software on newly added nodes, connecting wiring in the server tanks, loading tape drives into the supercomputer, and clearing SMART errors from
+                    faulty SAS drives.
+                </p>
+            </div>
+        </div>
+        <div class="container">
+            <h1>My Goals</h1>
+            <div class="goal-item">
+                <div class="goal-text">
+                    <h2>Goal #1</h2>
+                    <p>My first goal was to improve my scripting skills in Python and other tools. In the past 4 months, I learned how to perform web scraping using Python for the first time,
+                        then how to export my scripts to Prometheus. I further expanded my knowledge by scraping from different sources. The first web scraping script I wrote simply grabbed 
+                        from one of their data tracking sites. I then created a script to scrape data from a WebSocket server. Finally, the last script that I created scraped data used for time series modeling (TSM), 
+                        which updated its data every few minutes. Overall, I believe that I met this goal, as I now have the experience of web scraping from many different sources and displayed data in
+                        various formats.
+                    </p>
+                    <p>On the right, is one of my scripts that was uploaded to Prometheus. Using Prometheus, I was able to run my script with different parameters, with each parameter representing an individual node
+                        of the tank PDUs (Power Distribution Units). This allowed me to execute the script for all 27 PDU nodes (9 tanks with 3 nodes each).
+                    </p>
+                    
+                </div>
+                <div class="goal-screenshot">
+                    <img src="Screenshot3-1.png" alt="Prometheus tank_pdu_data scripts">
+                </div>
+            </div>
+            <div class="goal-item">
+                <div class="goal-text">
+                    <h2>Goal #2</h2>
+                    <p>My second goal was to create web scraping scripts in Python. Similar to Goal #1, I wanted to learn how to use Python to collect metrics from supercomputer units. However, using the data that
+                        I had scraped and converting it into Prometheus metrics was a difficult process. A lot of the data output was messy and hard to read, some datasets were so long, that it took several
+                        minutes to generate results. Over the past 4 months, I learned efficient ways in Python to extract the data I want to output, and how to print them into the correct format for Prometheus.
+                        If you look back at my first script to the last, you can see the efficiency of my scripts improve over time, as I would find better and faster methods to convert the data. Overall, I
+                        believe that I surpassed this goal as not only did I create web scraping scripts to deploy to Prometheus, but I also learned how to make my programs run more efficiently using various
+                        different strategies.</p>
+                        <p>On the right, is the output of one of my web scraping scripts using the Prometheus format. I made sure to include where the data was coming from, what it was measuring,
+                            the units, and of course, the value of each metric.
+                        </p>
+                </div>
+                <div class="goal-screenshot">
+                    <img src="Screenshot3-2.png" alt="script output">
+                </div>
+            </div>
+            <div class="goal-item">
+                <div class="goal-text">
+                    <h2>Goal #3</h2>
+                    <p>My final goal was to take initiative and be more proactive. This goal had me ask questions when necessary, and complete extra tasks as they arose. In addition to my scripting
+                        tasks, there were many tasks that were assigned to me to complete over the course of the 4 months. These tasks included loading tape drives, connecting wiring in the server tanks,
+                        installing software on newly added nodes, clearing SMART errors on SAS drives, and more. I believe that I achieved this goal as I was always willing to take on more work, which
+                        not only helped my colleagues, but also provided a break from scripting and helped prevent burnout. Throughout this co-op term, I consistently volunteered for hands-on tasks in
+                        the data center and aimed to be as useful as possible, which I believe that I successfully accomplished.
+                    </p>
+                        <p>On the right is the racks containing the units on which I had installed software. The process included me plugging in a USB, rearranging the data on the rack to make space for the new
+                            software, installing the software, and finally restarting the system.</p>
+                </div>
+                <div class="goal-screenshot">
+                    <img src="Screenshot3-3.png" alt="Image of the Data Center">
+                </div>
+            </div>
+        </div>
+        <div class="reflection-container">
+            <h1>Final Thoughts and Reflection</h1>
+            <p>This co-op term with SHARCNET was very important to my growth as a Software Engineering student, and it taught me how to be a good colleague. My 8-month co-op term in
+                2024 was a very valuable experience; however, it did not involve the same level of consistent human interaction as my experience with SHARCNET. During this term with SHARCNET, I worked alongside
+                another co-op student from Waterloo, and we collaborated on many of the hands-on tasks we were assigned. I also worked together with my colleagues to help them on tasks that required multiple
+                people to complete. While I was able to learn and apply my coding skills in a work environment, what I'm taking away the most from this experience are the teamwork skills I developed and I think
+                that these are valuable skills for me to learn if I want to be successful in school, and future work opportunities. Thank you SHARCNET for allowing me to be part of your team for the last 4 months,
+                and I am excited for future co-op opportunities to come!
+            </p>
+                <p style="font-size: 0.8em;">
+                    *All images on this site were used with the permission of my employer
+                </p>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-buttons">
+            <a href="summer2024.html">Summer<br>2024</a>
+            <a href="fall2024.html">Fall<br>2024</a>
+            <a href="summer2025.html">Summer<br>2025</a>
+            <!-- <a href="winter2026.html">Winter<br>2026</a> -->
+            <!-- <a href="summer2026.html">Summer<br>2026</a> -->
+        </div>
+    </footer>
+</body>
+</html>
