@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Co-op Work Term Report - Winter 2026</title>
+
+    <style>
+        :root {
+            /* OLAP-inspired Color Palette */
+            --primary-blue: #0D3B66;
+            --accent-blue: #1E90FF;
+            --dark-navy: #071A2E;
+            --soft-background: #F5F9FC;
+            --slate-gray: #6B7C93;
+            --light-gray: #DCE6F2;
+            --white: #FFFFFF;
+            --cyan-glow: #32C5FF;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--soft-background);
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(
+                135deg,
+                var(--dark-navy) 0%,
+                var(--primary-blue) 45%,
+                var(--accent-blue) 100%
+            );
+            color: var(--white);
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .header-left {
+            margin-left: 0;
+        }
+
+        .header-left a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            transition: opacity 0.3s ease;
+        }
+
+        .header-left a:hover {
+            opacity: 0.85;
+        }
+
+        .main-content {
+            margin-top: 80px;
+            padding: 20px;
+        }
+
+        .container {
+            padding: 20px;
+            background-color: var(--white);
+            box-shadow: 0 4px 16px rgba(13, 59, 102, 0.08);
+            border-radius: 12px;
+            border: 1px solid var(--light-gray);
+        }
+
+        .about-employer,
+        .job-description {
+            background: linear-gradient(
+                135deg,
+                #EEF6FF 0%,
+                #F8FBFF 100%
+            );
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            flex: 1;
+            max-width: 50%;
+            border: 1px solid var(--light-gray);
+        }
+
+        .goal-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .goal-text {
+            background-color: var(--white);
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            flex: 1;
+            max-width: 50%;
+            border-left: 5px solid var(--accent-blue);
+            box-shadow: 0 4px 12px rgba(13, 59, 102, 0.08);
+        }
+
+        .goal-screenshot {
+            flex: 0 0 auto;
+            max-width: 50%;
+            border: 2px solid var(--light-gray);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(13, 59, 102, 0.08);
+            background-color: var(--white);
+        }
+
+        .goal-screenshot img {
+            width: 100%;
+            border-radius: 12px;
+        }
+
+        .reflection-container {
+            padding: 20px;
+            background: linear-gradient(
+                135deg,
+                #EEF6FF 0%,
+                #F8FBFF 100%
+            );
+            box-shadow: 0 4px 16px rgba(13, 59, 102, 0.08);
+            border-radius: 12px;
+            margin-top: 10px;
+            margin-bottom: 75px;
+            border: 1px solid var(--light-gray);
+        }
+
+        .container-content {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        h1 {
+            color: var(--primary-blue);
+            margin-top: 0;
+            font-size: 2rem;
+        }
+
+        h2 {
+            color: var(--accent-blue);
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+
+        p {
+            line-height: 1.6;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            color: var(--slate-gray);
+        }
+
+        footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 12px;
+            background-color: var(--dark-navy);
+            color: var(--white);
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.12);
+        }
+
+        .footer-buttons {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .footer-buttons a {
+            color: var(--white);
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            text-align: center;
+            flex: 1;
+            font-size: 14px;
+            font-weight: 600;
+            background: linear-gradient(
+                135deg,
+                var(--accent-blue),
+                var(--cyan-glow)
+            );
+            margin: 0 5px;
+            box-shadow: 0 2px 8px rgba(30, 144, 255, 0.3);
+        }
+
+        .footer-buttons a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(30, 144, 255, 0.45);
+            opacity: 0.95;
+        }
+
+        /* Responsive Improvements */
+        @media (max-width: 900px) {
+            .about-employer,
+            .job-description,
+            .goal-text,
+            .goal-screenshot {
+                max-width: 100%;
+            }
+
+            .goal-item {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <a href="index.html">Home</a>
+        </div>
+    </header>
+    <div class="main-content">
+        <div class="container-content">
+            <div class="about-employer">
+                <h1>About My Employer</h1>
+                <p>Over the past 4 months, I had the opportunity to work for OLAP Solutions. OLAP Solutions is a consulting company based in Toronto, and the first AFS (Advanced Financial Solutions)
+                    implementation partner, and they help clients with their challenges with forecasting and budgeting processes.
+                </p>
+            </div>
+            <div class="job-description">
+                <h1>My Job</h1>
+                <p> Throughout this term, I was given two main tasks. The first was developing a VBScript which outputs AFS (Advanced Financial Solutions) reports to the user. In this process, I learned
+                    how to use VBScript and how to build tables for the AFS report using HTML, written by the VBScript. The other main task was to maintain and clean up the company website, by
+                    removing inaccessible pages, adding new content, and fixing bugs. I learned how to use WordPress for this task, and even creating sample websites on WordPress while I was learning how
+                    to use it. Finally, I was given other various minor tasks such as fixing Excel files, and inserting data into LastPass.
+                </p>
+            </div>
+        </div>
+        <div class="container">
+            <h1>My Goals</h1>
+            <div class="goal-item">
+                <div class="goal-text">
+                    <h2>Goal #1</h2>
+                    <p>	The first goal was to become proficient with using VBScript so that the company can use the scripts I work on for themselves of for a client to use for AFS
+                        Documentation purposes. Throughout the term, I worked on a VBScript which outputs AFS reports to the user. When the script runs, it gives the user information about every XML
+                        file in the folder and its subfolders, as well as information about its user attributes and area attributes. All of this data is outputted in tables and is organized using dropdowns.
+                        I also allowed the user to put what folder they want the output file to go to, which folder they want to run the script on, and what to name the output file. Finally, the script gives
+                        live updates in the terminal where you run the script, telling you which folder it is running through, which file it is looking at, and how long the report took to run once it's complete.
+                        Overall, I believe that I surpassed this goal as I am very proud with what I was able to develop, and I think that I now understand this scripting language very well, after having no
+                        experience with it in the past.</p>
+                    <p>On the right, is the terminal output that the script generates while it is running, when I ran the script on sample folders.
+                    </p>
+                    
+                </div>
+                <div class="goal-screenshot">
+                    <img src="Screenshot4-1.png" alt="Prometheus tank_pdu_data scripts">
+                </div>
+            </div>
+            <div class="goal-item">
+                <div class="goal-text">
+                    <h2>Goal #2</h2>
+                    <p>	My second goal was to get the entire online WordPress course on Udemy, and to fix all of the bugs, as well as adding all the needed features, to the company's website so that it is accessible
+                        for clients. During this term, I became the company's webmaster as I helped maintain the website, and made it more accessible to clients. I removed the pages that contained junk and
+                        placeholder content, while also fixing bugs and cleaning up sections that would be confusing to viewers. I also went through an online WordPress course on Udemy to learn how to use it, as I
+                        had no prior experience on WordPress. In the last 4 months, I learned a lot about how to use WordPress. I learned how to use the customization feature, how to create menus and widgets, and
+                        also learned a little about making a website accessible on mobile devices, though I wasn't able to dive too deeply in that aspect. Overall, I believe that I met this goal. While I didn't
+                        quite get to finish the WordPress course, the knowledge I gained from it was really valuable, and I was able to apply it to improving the company's website, which ended up being shown at a
+                        conference. The company website can be found <a href="https://olapsolutions.com/">here</a>.</p>
+                        <p>On the right, is an image of one of the WordPress websites I created when going through the course on Udemy.
+                        </p>
+                </div>
+                <div class="goal-screenshot">
+                    <img src="Screenshot4-2.png" alt="script output">
+                </div>
+            </div>
+            <div class="goal-item">
+                <div class="goal-text">
+                    <h2>Goal #3</h2>
+                    <p> My third goal was to improve my self-learning skills. Throughout the term, I would have a lot of downtime when I wasn't working on the VBScript, the website, or other various tasks. When
+                        this happened, I would message the group in Slack to see if they had any tasks for me to do. I also made sure to try and learn new things. I went through the WordPress course on Udemy and
+                        experimented with different features of WordPress. I also added new features to my VBScript that weren't originally a requirement. This includes features such as the timer that keeps track
+                        of run time, and I also added a colored box beside the hex code of a color so that the user can know what the hex color code means. I believe that I met this goal. I was able to keep myself
+                        productive and I ended up learning a lot during this downtime.</p>
+                        <p>On the right, is an image of the report generated by my VBScript, featuring the colored box beside the hex code that I had added.
+                        </p>
+                </div>
+                <div class="goal-screenshot">
+                    <img src="Screenshot4-3.png" alt="Image of the Data Center">
+                </div>
+            </div>
+        </div>
+        <div class="reflection-container">
+            <h1>Final Thoughts and Reflection</h1>
+            <p> This co-op term with OLAP Solutions was an invaluable experience for my growth as a Software Engineering student. I've had three co-op work terms previously and those three work terms
+                gave me the experience needed to be successful in this one, and I was able to further develop my skills over the last 4 months. I feel like I was able to learn and apply my coding skills
+                in a work environment, and I also applied teamwork skills that I have learned in the last four years through co-op and academics. I believe that this work term helped me improve the
+                skills necessary to be successful in future career opportunities. Thank you OLAP Solutions for allowing me to be part of your team for the last 4 months, and I am excited for future
+                opportunities to come!
+            </p>
+                <p style="font-size: 0.8em;">
+                    *All images on this site were used with the permission of my employer
+                </p>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-buttons">
+            <a href="summer2024.html">Summer<br>2024</a>
+            <a href="fall2024.html">Fall<br>2024</a>
+            <a href="summer2025.html">Summer<br>2025</a>
+            <a>Winter<br>2026</a>
+        </div>
+    </footer>
+</body>
+</html>
